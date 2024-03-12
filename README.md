@@ -1,5 +1,6 @@
 # Ping CSV hosts list with powershell and save the online and offline hosts to respective arrays
 
+```
 $hostnames = (import-csv "hostnames.csv" -Header "HOSTNAME","USER").HOSTNAME
 clear
 $hostnames
@@ -25,3 +26,4 @@ foreach ($online_host in $online_hosts) {
 foreach ($offline_host in $online_hosts) {
     write-host Offline host: $offline_host
 }
+```
